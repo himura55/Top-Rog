@@ -19,7 +19,7 @@ public class PlayerCtrl : MonoBehaviour
         animator = GetComponent<Animator>();
     }
    
-    void Update()
+    void Update()   
     {
        
 float verticalInput = Input.GetAxisRaw("Vertical");
@@ -41,8 +41,8 @@ if ((horizontalInput > 0 && !faceRight) || (horizontalInput < 0 && faceRight))
 }
 
 
-        speedX = Input.GetAxisRaw("Horizontal") * moveSpeed ;
-        speedY = Input.GetAxisRaw("Vertical") * moveSpeed;
+        speedX = (Input.GetAxisRaw("Horizontal") * moveSpeed); ;
+        speedY = (Input.GetAxisRaw("Vertical") * moveSpeed);
         rb.velocity = new Vector2(speedX, speedY);
     }
     
